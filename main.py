@@ -17,8 +17,9 @@ from Statistics.statisticsmapview import StatisticsMapView
 from kivy.core.window import Window
 import sqlite3
 import os
+import certifi
+os.environ['SSL_CERT_FILE'] = certifi.where()
 
-Window.size = (375, 680)
 
 class HomeScreen(Screen):
     pass
@@ -174,6 +175,12 @@ class mainApp( MDApp):
         # If some other kind of "touch": Fall back on Scatter's behavior
         else:
             print("nothing happen")
+
+    def change_profile_source(self, path):
+        self.root.ids.profile.source = path  # For mobile phone
+        self.root.ids.nav_drawer.toggle_nav_drawer()
+        with open("profile_source.txt", "w") as f:
+            f.write(path)  # For mobile phone
 
     def change_screen(self, screen_name, direction='forward', mode=""):
         # Get the screen manager from the kv file.
