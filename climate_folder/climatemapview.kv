@@ -1,0 +1,20 @@
+#:import MapView kivy_garden.mapview.MapView
+#:import GpsBlinker gpsblinker.GpsBlinker
+
+
+<ClimateMapView>:
+    lat: -13.9626
+    lon: 33.7741
+    zoom: 6
+    double_tap_zoom: True
+    on_zoom:
+        self.zoom = 6 if self.zoom < 6 else self.zoom # set minimum zoom = 6
+
+    GpsBlinker:
+        lat: root.lat
+        lon: root.lon
+        id: climateblinker
+
+    MapMarkerPopup:
+        lat: -11
+        lon: 34

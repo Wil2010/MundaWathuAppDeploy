@@ -1,0 +1,38 @@
+            BoxLayout :
+                 orientation : 'vertical'
+                 spacing : '8dp'
+                 padding : '8dp'
+                 ImageButton:
+                     id: profile
+                     source: app.img_source_path
+                     canvas.before:
+                         Color:
+                             rgb: app.theme_cls.primary_color if self.state == 'normal' else utils.get_color_from_hex("#6C5B7B")
+                         Rectangle:
+                             size: self.size
+                             pos: self.pos
+                      on_release:
+                          nav_drawer.toggle_nav_drawer()
+                          app.change_screen("profilephoto_screen", direction='right', mode='push')
+
+                 MDLabel :
+                      text : 'Welcome to My Singapore Transport Tracking App!'
+                      font_style : 'Caption'
+                      size_hint_y : None
+                      height : self.texture_size[1]
+                 ScrollView :
+                      MDList :
+                          OneLineIconListItem :
+                              text : 'Change Theme'
+                              on_release:
+                                  app.show_theme_picker()
+                                  nav_drawer.toggle_nav_drawer()
+                              IconLeftWidget:
+                                  icon: 'pencil'
+                          OneLineIconListItem :
+                              text : 'Favourite'
+                              on_release:
+                                  app.go_to_favourite_bus()
+                                  nav_drawer.toggle_nav_drawer()
+                              IconLeftWidget:
+                                  icon: 'star'

@@ -1,0 +1,84 @@
+#:include kv/homescreen.kv
+#:include kv/climatescreen.kv
+#:include kv/statisticsscreen.kv
+#:include kv/aboutscreen.kv
+#:include kv/populationmapscreen.kv
+#:include kv/rainfallmapscreen.kv
+#:include kv/temperaturemapscreen.kv
+#:include kv/occupationscreen.kv
+
+#:import utils kivy.utils
+
+Screen:
+    NavigationLayout :
+        MDToolbar :
+            id: titlename
+            title : 'MundaWathu'
+            left_action_items : [["menu", lambda x : nav_drawer.toggle_nav_drawer()]]
+            md_bg_color: app.theme_cls.primary_color
+            elevation : 8
+            pos_hint: {"top": 1, "left": 1}
+            size_hint: 1, .1
+        ScreenManager :
+            id: screen_manager
+            size_hint: 1, 1
+            pos_hint: {"top": 1, "left": 1}
+            HomeScreen:
+                name: "home_screen"
+                id: home_screen
+            ClimateScreen:
+                name: "climate_screen"
+                id: climate_screen
+            StatisticsScreen
+                name:"statistics_screen"
+                id: statistics_screen
+            AboutScreen:
+                name: "about_screen"
+                id: about_screen
+            PopulationMapScreen:
+                name: "populationmap_screen"
+                id: populationmap_screen
+            RainfallMapScreen:
+                name: "rainfallmap_screen"
+                id: rainfallmap_screen
+            TemperatureMapScreen
+                name: "temperaturemap_screen"
+                id: temperaturemap_screen
+            OccupationMapScreen
+                name: "occupationmap_screen"
+                id: occupationmap_screen
+
+        MDNavigationDrawer :
+            id : nav_drawer
+            BoxLayout :
+                orientation : 'vertical'
+                spacing : '8dp'
+                padding : '8dp'
+                Image :
+                    source : app.img_source_path
+                MDLabel :
+                    text : 'Profile'
+                    font_style : 'Subtitle1'
+                    size_hint_y : None
+                    height : self.texture_size[1]
+                MDLabel:
+                    text: 'Welcome to MundaWathu App'
+                    font_style : 'Caption'
+                    size_hint_y : None
+                    height : self.texture_size[1]
+                ScrollView :
+                    MDList :
+                        OneLineIconListItem :
+                            text : 'Change Theme'
+                            on_release:
+                                app.show_theme_picker()
+                                nav_drawer.toggle_nav_drawer()
+                            IconLeftWidget:
+                                icon: 'pencil'
+                        OneLineIconListItem :
+                            text : 'About'
+                            on_release:
+                                app.go_to_about()
+                                nav_drawer.toggle_nav_drawer()
+                            IconLeftWidget:
+                                icon: 'application'

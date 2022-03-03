@@ -1,0 +1,36 @@
+#:import utils kivy.utils
+
+<AboutScreen>:
+    FloatLayout:
+        GridLayout:
+            id: aboutheader
+            pos_hint: {"top": .895, "left": 1}
+            size_hint: 1, .1
+            cols: 1
+        MDLabel:
+            text:"Mundawathu Gardens is an innovation and technological certified fruit seedlings multiplication. The enterprise produces perennial tree seedlings which are used as livestock fodders for smallholder’s farmers and exotic seedlings that are soil fixing nitrogen and improving soil fertility. Mundawathu tests and multiplies vegetable seedlings that are climatic adaptive and resilient to promote intercropping farming systems between fruits and vegetables. \n  \n Contacts\n+265 996 15 93 65\n mundawathugardens@gmail.com"
+            font_style: "H6"
+        ScrollView:
+            pos_hint: {"top": .795, "left": 1}
+            size_hint: 1, .695
+            MDGridLayout:
+                id: aboutbody
+                cols: 1
+                adaptive_height: True
+                row_default_height: '100dp'
+                row_force_default: True
+                spacing: 2,2
+        GridLayout:
+            rows: 1
+            size_hint: 1, .1
+            pos_hint: {"top": .1, "right": 1}
+            ImageButton:
+                source: "icons/back.png"
+                canvas.before:
+                    Color:
+                        rgb: app.theme_cls.primary_color if self.state == 'normal' else utils.get_color_from_hex("#6C5B7B")
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+                on_release:
+                    app.change_screen("home_screen", direction='left', mode='pop')
