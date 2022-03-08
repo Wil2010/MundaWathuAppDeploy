@@ -46,8 +46,6 @@ class mainApp( MDApp):
     search_menu = None
     climatemapview = ObjectProperty(None)
     statisticsmapview = ObjectProperty(None)
-    # For refreshing about service
-    #refresh_about_service = None
     current_screen_is_about_screen = False
 
 
@@ -136,7 +134,6 @@ class mainApp( MDApp):
                 else:
                     continue
         except:
-            print("Something is wrong")
             pass
         if self.current_screen_is_about_screen == False:
             # print("First load")
@@ -205,13 +202,11 @@ class mainApp( MDApp):
                 # Remove climatemapview widget
                 for w in climatescreen_mapview.walk():
                     if w.__class__ == ClimateMapView:
-
                         climatescreen_mapview.remove_widget(w)
                     else:
                         continue
                         # print("No widget to remove")
             except:
-                print("Something is wrong")
                 pass
 
             self.climatemapview = ClimateMapView()
@@ -230,12 +225,10 @@ class mainApp( MDApp):
                 # Remove statisticsmapview widget
                 for w in statistics_backdropfrontlayer.walk():
                     if w.__class__ == StatisticsMapView:
-                        print("remove occupationmapview widget")
                         statistics_backdropfrontlayer.remove_widget(w)
                     else:
                         continue
             except:
-                print("Something is wrong")
                 pass
 
 
@@ -249,18 +242,13 @@ class mainApp( MDApp):
 
         if screen_name != "about_screen":
             self.current_screen_is_about_screen = False
-
         if screen_name == "populationmap_screen":
-            print("Screen name is ", screen_name)
             self.root.ids.titlename.title = "Population Map"
         if screen_name == "rainfallmap_screen":
-            print("Screen name is ", screen_name)
             self.root.ids.titlename.title = "Rainfall Map"
         if screen_name == "temperaturemap_screen":
-            print("Screen name is ", screen_name)
             self.root.ids.titlename.title = "Temperature Map"
         if screen_name == "occupationmap_screen":
-            print("Screen name is ", screen_name)
             self.root.ids.titlename.title = "Occupation"
 
 mainApp().run()
