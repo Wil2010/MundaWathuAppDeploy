@@ -2,47 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddda5baf-fb01-4ec9-91ce-6b66a3238706" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/icons/icons.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/BD.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/DD.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/LRT.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/SD.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/WAB.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/accident.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/arrowdown.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/arrowup.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/bicycleparking.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/blackstar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/bus-stop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/bus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/bushead.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/car.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/car_label.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/carparking.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/cctv.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/cctv_color.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/diversion.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/finish.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/heavytraffic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/heavyvehicle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/heavyvehicle_label.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/incident.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/misc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/motorcycle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/motorcycle_label.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/obstacle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/roadblock.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/roadopening.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/roadworks.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/start.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/startfinish.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/taxi-stop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/taxi.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/transparent.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/unattendedvehicle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/vehiclebreakdown.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/yellowstar.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
